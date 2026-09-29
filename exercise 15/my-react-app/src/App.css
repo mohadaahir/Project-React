@@ -1,0 +1,143 @@
+.language-page {
+  min-height: 100svh;
+  padding: 30px clamp(22px, 6vw, 88px) 26px;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(247, 218, 168, 0.4), transparent 52%),
+    repeating-linear-gradient(135deg, transparent 0 46px, rgba(46, 65, 56, 0.025) 47px 48px),
+    #f5f3eb;
+  color: #273b32;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordmark {
+  color: #273b32;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.wordmark span {
+  color: #d56b47;
+}
+
+.language-toggle {
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid rgba(39, 59, 50, 0.24);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.58);
+  color: #273b32;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.language-toggle:hover {
+  background: #273b32;
+  color: #fffdf7;
+}
+
+.language-toggle:focus-visible,
+.wordmark:focus-visible {
+  outline: 2px solid #d56b47;
+  outline-offset: 3px;
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 58px 0;
+}
+
+.greeting {
+  max-width: 750px;
+  text-align: center;
+  animation: arrive 460ms ease-out both;
+}
+
+.eyebrow {
+  margin: 0 0 26px;
+  color: #bd6142;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.greeting h1 {
+  margin: 0;
+  color: #273b32;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(54px, 11vw, 112px);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.description {
+  max-width: 390px;
+  margin: 24px auto 0;
+  color: #68766d;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #879188;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.note-line {
+  width: 42px;
+  height: 1px;
+  background: #c7c9be;
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .language-page {
+    padding: 22px 18px;
+  }
+
+  .greeting h1 {
+    font-size: 58px;
+  }
+
+  .eyebrow {
+    max-width: 240px;
+    margin: 0 auto 22px;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
