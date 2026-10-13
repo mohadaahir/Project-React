@@ -1,0 +1,38 @@
+.contactApp {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  padding: 28px;
+}
+
+.title {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.search {
+  margin: 20px 0;
+}
+
+.search label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font: inherit;
+  color: #111827;
+  background: #ffffff;
+}
