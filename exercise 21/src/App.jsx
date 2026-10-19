@@ -1,5 +1,7 @@
 import './App.css'
 
+
+
 const stats = [
   { title: "Average Grade", value: "88%", icon: "📊" },
   { title: "Courses", value: "3", icon: "📚" },
@@ -70,11 +72,11 @@ const announcements = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 px-4 py-5 text-gray-800 sm:px-6 sm:py-8 lg:px-10">
-      <main className="mx-auto max-w-6xl space-y-5">
+    <div className="min-h-screen bg-gray-50 p-4 text-gray-800 sm:p-6 lg:p-10">
+      <main className="mx-auto max-w-7xl space-y-6">
 
         {/* Header */}
-        <header className="flex items-center justify-between rounded-xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6">
+        <header className="flex items-center justify-between rounded-2xl bg-white p-5 shadow-sm sm:p-6">
           <div>
             <h1 className="text-xl font-bold sm:text-2xl">
               Welcome back, Student!
@@ -84,7 +86,7 @@ function App() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-4">
             <button
               aria-label="Notifications"
               className="relative rounded-full p-2 hover:bg-gray-100"
@@ -93,7 +95,7 @@ function App() {
               <span className="absolute right-1 top-1 h-2 w-2 rounded-full bg-red-500" />
             </button>
 
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-purple-600 font-semibold text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 font-semibold text-white">
               S
             </div>
           </div>
@@ -104,27 +106,27 @@ function App() {
           {stats.map((stat) => (
             <div
               key={stat.title}
-              className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5"
+              className="flex items-center gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <span className="text-2xl">{stat.icon}</span>
               <div>
                 <p className="text-sm text-gray-500">{stat.title}</p>
-                <h2 className="text-xl font-bold">{stat.value}</h2>
+                <h2 className="text-2xl font-bold">{stat.value}</h2>
               </div>
             </div>
           ))}
         </section>
 
         {/* Main Content */}
-        <section className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <section className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
           {/* Course Progress */}
-          <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6 lg:col-span-2">
-            <h2 className="mb-5 text-base font-bold">
+          <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6 lg:col-span-2">
+            <h2 className="mb-6 text-lg font-bold">
               Course Progress
             </h2>
 
-            <div className="space-y-7">
+            <div className="space-y-8">
               {courses.map((course) => (
                 <div key={course.name}>
                   <div className="mb-3 flex items-center justify-between gap-3">
@@ -165,15 +167,15 @@ function App() {
           </div>
 
           {/* Right Sidebar */}
-          <div className="space-y-5">
+          <div className="space-y-6">
 
             {/* Upcoming Assignments */}
-            <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
-              <h2 className="mb-4 text-base font-bold">
+            <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
+              <h2 className="mb-5 text-lg font-bold">
                 Upcoming Assignments
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {assignments.map((assignment) => (
                   <div
                     key={assignment.title}
@@ -205,8 +207,8 @@ function App() {
             </div>
 
             {/* Announcements */}
-            <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
-              <h2 className="mb-4 text-base font-bold">
+            <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
+              <h2 className="mb-5 text-lg font-bold">
                 Announcements
               </h2>
 
