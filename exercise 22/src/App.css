@@ -1,0 +1,141 @@
+:root {
+  --form-ink: #202033;
+  --form-muted: #77768b;
+  --form-border: #e4e3ef;
+  --form-accent: #6558d3;
+  color-scheme: light;
+}
+
+#root {
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(ellipse at 12% 12%, #e9e6ff 0, transparent 34%),
+    radial-gradient(ellipse at 90% 90%, #e5f4ff 0, transparent 35%),
+    #f7f7fc;
+  border: 0;
+}
+
+.form-card {
+  box-sizing: border-box;
+  display: grid;
+  gap: 20px;
+  width: min(100%, 440px);
+  padding: 36px;
+  border: 1px solid rgba(228, 227, 239, 0.9);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(43, 39, 90, 0.12);
+  text-align: left;
+}
+
+.form-card h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -0.6px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field label {
+  color: var(--form-ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-card input:not([type="checkbox"]),
+.form-card select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid var(--form-border);
+  border-radius: 11px;
+  outline: none;
+  background: #fafaff;
+  color: var(--form-ink);
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.form-card input::placeholder {
+  color: #9897a9;
+}
+
+.form-card input:hover {
+  border-color: #c9c5ed;
+}
+
+.form-card input:focus {
+  border-color: var(--form-accent);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(101, 88, 211, 0.13);
+}
+
+.form-card input[aria-invalid="true"] {
+  border-color: #c53d4b;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--form-ink);
+  font-size: 15px;
+}
+
+.form-card input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--form-accent);
+}
+
+.error {
+  color: #b42332;
+  font-size: 14px;
+}
+
+.form-card button {
+  min-height: 52px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--form-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(101, 88, 211, 0.24);
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.form-card button:hover {
+  background: #5446c0;
+  box-shadow: 0 11px 22px rgba(101, 88, 211, 0.3);
+  transform: translateY(-1px);
+}
+
+.form-card button:focus-visible {
+  outline: 3px solid rgba(101, 88, 211, 0.35);
+  outline-offset: 3px;
+}
+
+.success {
+  padding: 14px 16px;
+  border: 1px solid #b9e4c8;
+  border-radius: 11px;
+  background: #f0fbf3;
+  color: #216e3a;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+}
